@@ -1,0 +1,66 @@
+﻿<HTML>
+<HEAD><!--
+/*  Tamil Visai Extension for Google Chrome Browser 1.0
+    Copyright (C) 2011 Gopalakrishnan (Gopi) http://www.higopi.com
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+    Further to the terms mentioned you should leave this copyright notice
+    intact, stating me as the original author.
+*/
+
+
+-->
+<script>
+
+function setSelLang(radioButton) {
+  if (window.localStorage == null) {
+    alert('Local storage is required for changing providers');
+    return;
+  }
+    window.localStorage.tamilKeySelLang = radioButton.value;
+}
+
+function main()
+{
+	if(window.localStorage.tamilKeySelLang == null)
+		window.localStorage.tamilKeySelLang = "english"
+	document.getElementById(window.localStorage.tamilKeySelLang).checked = true;
+}
+</script>
+
+</HEAD>
+<BODY onload="main()">
+<table width=200>
+<tr><td nowrap="nowrap" style="font-size:10px"><input id="tamil" value="tamil" onclick="setSelLang(this)" name=sellang type="radio">அஞ்சல் </td><td nowrap="nowrap" style="font-family:arial;font-size:11px">Alt + F8</td></tr>
+
+<tr><td nowrap="nowrap" style="font-size:10px"><input id="tamil99" value="tamil99" onclick="setSelLang(this)" name=sellang type="radio">தமிழ் 99</td><td nowrap="nowrap" style="font-family:arial;font-size:11px">Alt + F9</td></tr>
+
+<tr><td nowrap="nowrap" style="font-size:10px"><input id="bamini" value="bamini" onclick="setSelLang(this)" name=sellang type="radio">பாமினி</td><td nowrap="nowrap" style="font-family:arial;font-size:11px">Alt + F10</td></tr>
+
+<tr><td nowrap="nowrap" style="font-size:10px"><input id="typewriter" value="typewriter" onclick="setSelLang(this)" name=sellang type="radio">தமிழ் தட்டச்சு</td><td nowrap="nowrap" style="font-family:arial;font-size:11px">Alt + F11</td></tr>
+<!--
+<tr><td nowrap="nowrap" style="font-size:10px"><input onclick="setSelLang(this)" name=sellang type="radio">பழைய தட்டச்சு  </td><td nowrap="nowrap" style="font-family:arial;font-size:11px">Alt + F11</td></tr>
+
+<tr><td nowrap="nowrap" style="font-size:10px"><input onclick="setSelLang(this)" name=sellang type="radio">புதிய தட்டச்சு</td><td nowrap="nowrap" style="font-family:arial;font-size:11px">Alt + F12</td></tr>
+
+<tr><td nowrap="nowrap" style="font-size:10px"><input onclick="setSelLang(this)" name=sellang type="radio">இன்ஸ்க்ரிப்ட்</td><td nowrap="nowrap" style="font-family:arial;font-size:11px">Alt + F7</td></tr>
+
+<tr><td nowrap="nowrap" style="font-size:10px"><input onclick="setSelLang(this)" name=sellang type="radio">அவ்வை</td><td nowrap="nowrap" style="font-family:arial;font-size:11px">Alt + F6</td></tr>
+-->
+<tr><td nowrap="nowrap" style="font-size:10px"><input id="english" value="english" onclick="setSelLang(this)" name=sellang type="radio" checked="true">ஆங்கிலம்</td><td nowrap="nowrap" style="font-family:arial;font-size:11px">F9</td></tr>
+</table>
+</BODY>
+</HTML>
+   

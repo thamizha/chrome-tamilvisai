@@ -1,0 +1,23 @@
+{
+  "name": "Tamil Visai",
+  "version": "1.0",
+  "description": "A utility for typing in Tamil language.",
+  "browser_action": {
+    "default_icon": "images/icon.png",
+    "default_title": "Tamil Visai",      // optional; shown in tooltipx
+    "popup": "popup.html"
+  },
+  "background_page": "background.html",
+  "icons": { "128": "images/icon.png" },
+  "content_scripts": [
+    { "matches": ["http://*/*", "https://*/*"], 
+	  "js": [	"scripts/common.js",
+				"scripts/anjal.js",
+				"scripts/tamil99.js",
+            "scripts/bamini.js",
+				"scripts/tamiltw.js"] }
+  ],
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*"
+  ]
+}
